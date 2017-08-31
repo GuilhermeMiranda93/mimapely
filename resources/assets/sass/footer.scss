@@ -1,0 +1,41 @@
+footer{
+
+	a{
+		color: white;
+		font-size: 12px;
+		font-weight: lighter;
+	}
+
+	p{
+		color: white;
+		font-size: 12px;
+		font-weight: lighter;
+	}
+
+	ul{
+		list-style-type: none;
+	}
+
+	background-color: $cor_empresa;
+	
+	h6{
+		font-weight: 700;
+		color: white;
+	}
+
+	.footer-info{
+		background-color: white;
+
+		p{
+			color: $cor_empresa;
+		}
+
+		a{
+			color: $cor_empresa;
+		}
+		
+	}
+
+
+
+}

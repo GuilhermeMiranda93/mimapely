@@ -11,6 +11,20 @@
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+Route::get('/', 'HomeController@home');
+
+Route::get('/o-hotel', 'SobreController@hotel');
+
+Route::get('/apartamento', 'SobreController@apartamento');
+
+Route::get('/cafe-da-manha', 'SobreController@cafedamanha');
+
+Route::get('/precos', 'OutrosController@preco');
+
+Route::get('/reservas', 'OutrosController@reserva');
+
+Route::get('/contato', 'ContatoController@contato');
+
+Route::get('/localizacao', 'ContatoController@localizacao');
+
+Route::get('/nossa-cidade', 'ContatoController@cidade');

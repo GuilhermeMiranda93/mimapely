@@ -11,5 +11,16 @@ let mix = require('laravel-mix');
  |
  */
 
-mix.js('resources/assets/js/app.js', 'public/js')
-   .sass('resources/assets/sass/app.scss', 'public/css');
+mix.sass('resources/assets/sass/app.scss', 'public/css')
+ .sass('resources/assets/sass/bootstrap/bootstrap.scss', 'public/css')
+ .options({
+ 	processCssUrls: false
+ })
+ .js('resources/assets/js/custom.js','public/js')
+ .babel([
+ 	'resources/assets/js/jquery-3.2.1.js',
+ 	'resources/assets/js/tether.js',
+ 	'resources/assets/js/bootstrap.js',
+ 	'resources/assets/js/lightbox.js'
+ 	],'public/js/lib.js')
+ .version();

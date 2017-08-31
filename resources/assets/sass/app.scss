@@ -1,9 +1,141 @@
 
 // Fonts
 @import url("https://fonts.googleapis.com/css?family=Raleway:300,400,600");
+@import url('https://fonts.googleapis.com/css?family=Indie+Flower');
+@import url('https://fonts.googleapis.com/css?family=Lato:100,300,400,700,900');
+@import url('https://fonts.googleapis.com/css?family=Patua+One');
+
+@font-face {
+	font-family: 'impress';
+	src: url('../fonts/Impress BT.ttf');
+	font-weight: normal;
+}
+
 
 // Variables
 @import "variables";
 
-// Bootstrap
-@import "~bootstrap-sass/assets/stylesheets/bootstrap";
+// Footer
+@import "footer";
+
+// Font Awesome
+@import "font-awesome";
+
+// Responsive Services
+@import "responsive";
+
+// Navbar
+@import "navbar";
+
+// Lightbox
+@import "Lightbox";
+
+
+
+.corpo-site{
+
+	.filter{
+		position: relative;
+		-webkit-filter: contrast(85%) brightness(110%) saturate(75%) sepia(22%);
+		filter: contrast(85%) brightness(110%) saturate(75%) sepia(22%);
+		&::before {
+			content: "";
+			display: block;
+			height: 100%;
+			width: 100%;
+			top: 0;
+			left: 0;
+			position: absolute;
+			pointer-events: none;
+			mix-blend-mode: soft-light;
+			opacity: 0.5;
+			background: rgba(173, 205, 239, 1);
+
+		}
+	}
+
+	.btn-custom{
+		background-color: $cor_empresa;
+		color: white;
+		border: none;
+	}
+
+	h2{
+		font-family: 'impress', 'sans-serif';
+		color: $cor_empresa;
+	}
+
+	h3{
+		font-family: 'impress', 'sans-serif';
+		color: $cor_empresa;
+	}
+
+	padding-top: 100px;
+
+	a{
+
+		text-decoration: none;
+
+		&:hover{
+			color: white;	
+		}
+	}
+
+	.carousel-inner{
+		max-height: 500px !important;
+	}
+
+
+	.card-img{
+		height: 200px;
+		overflow: hidden;
+	}
+
+	.card-footer{
+		background-color: $cor_empresa;
+		color: white;
+		font-weight: 700;
+	}
+
+	.card{
+		border: none;
+	}
+
+	.img-sobre{
+		max-height: 400px;
+		overflow: hidden;
+	}
+
+	.icones-oferecemos{
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
+		text-align: center;
+
+		span{
+			font-weight: 700;
+		}
+
+		i{
+			background-color: $cor_empresa;
+			color: white;
+			width: 100px;
+			height: 100px;
+			border-radius: 50%;
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			margin: 0 !important;
+			&:before{
+				margin-left: 4px;
+			}
+		}
+	}
+
+	.foto-cidade{
+		max-height: 200px;
+		overflow: hidden;
+	}
+
+}
