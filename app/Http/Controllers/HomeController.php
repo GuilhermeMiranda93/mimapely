@@ -14,6 +14,12 @@ class HomeController extends Controller
     	->where('excluido',0)
     	->get();
 
+        $sobre = Texto::where('localizacao',18)
+        ->where('ativo',1)
+        ->where('excluido',0)
+        ->limit(1)
+        ->get();
+
     	$telefone = Texto::where('localizacao',7)
     	->where('ativo',1)
     	->where('excluido',0)
@@ -34,13 +40,22 @@ class HomeController extends Controller
     	->where('excluido',0)
     	->get();
 
+        $empreendimentos = Texto::where('localizacao',3)
+        ->where('ativo',1)
+        ->where('excluido',0)
+        ->where('destaque',1)
+        ->limit(3)
+        ->get();
+
     	return view('pages.home',[
 
     		'banner' => $banner,
     		'telefone' => $telefone,
     		'endereco' => $endereco,
     		'email' => $email,
-    		'redessociais' => $redessociais
+    		'redessociais' => $redessociais,
+            'empreendimentos' => $empreendimentos,
+            'sobre' => $sobre
 
     		]);
     }

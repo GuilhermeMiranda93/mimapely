@@ -5,23 +5,21 @@
 @slot('activeHome')
 active
 @endslot
-@slot('activeSobre')
+@slot('activePortfolio')
 inactive
 @endslot
-@slot('activeInformacoes')
+@slot('activeServicos')
+inactive
+@endslot
+@slot('activeParceiros')
 inactive
 @endslot
 @slot('activeContato')
 inactive
 @endslot
-@slot('activeSatisfacao')
-inactive
-@endslot
 @endcomponent
 
 <div class="corpo-site">
-	
-
 
 	<div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
 		<ol class="carousel-indicators">
@@ -45,7 +43,7 @@ inactive
 			</div>
 			@else
 			<div class="carousel-item">
-				<img class="d-block img-fluid" src="{{URL::asset($item->imagem)}}" alt="First slide">
+				<img class="d-block img-fluid" src="{{URL::asset($item->imagem)}}" alt="{{$item->titulo}}">
 			</div>
 			@endif
 
@@ -62,21 +60,39 @@ inactive
 		</a>
 	</div>
 
+	<div class="container my-5">
+		<div>
+			@foreach($sobre as $item)
+			<h2>{{$item->titulo}}</h2>
+			<hr>
+			{!! $item->texto !!}
+			@endforeach
+		</div>
+	</div>
 
-	<div class="container mt-5 mb-5">
+
+	<div class="container my-5">
+
+		<div class="row mt-5">
+			<div class="col-12">
+				<h2>Empreendimentos</h2>
+				<hr>
+			</div>
+		</div>
+
 		
 		<div class="row">
 
-
 			<div class="card-deck">
+
+				@foreach($empreendimentos as $item)
 				<div class="card mb-4 px-4">
 					<div class="card-img">
-						<img class="card-img-top img-fluid" src="{{URL::asset('img/reserva.jpg')}}" alt="Card image cap">
+						<img class="card-img-top img-fluid" src="{{URL::asset($item->imagem)}}" alt="Card image cap">
 					</div>
 					
 					<div class="card-block">
-						<h4 class="card-title">Faça sua reserva</h4>
-						<p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+						<h4 class="card-title">{{$item->titulo}}</h4>
 					</div>
 					<a href="#" title="">
 						<div class="card-footer text-center">
@@ -84,34 +100,8 @@ inactive
 						</div>
 					</a>
 				</div>
-				<div class="card mb-4 px-4">
-					<div class="card-img">
-						<img class="card-img-top img-fluid" src="{{URL::asset('img/quarto.jpg')}}" alt="Card image cap">
-					</div>
-					<div class="card-block">
-						<h4 class="card-title">Apartamentos</h4>
-						<p class="card-text">This card has supporting text below as a natural lead-in to additional content.</p>
-					</div>
-					<a href="#" title="">
-						<div class="card-footer text-center">
-							Saiba Mais
-						</div>
-					</a>
-				</div>
-				<div class="card mb-4 px-4">
-					<div class="card-img">
-						<img class="card-img-top img-fluid" src="{{URL::asset('img/promocoes.jpg')}}" alt="Card image cap">
-					</div>
-					<div class="card-block">
-						<h4 class="card-title">Nossas promoções</h4>
-						<p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This card has even longer content than the first to show that equal height action.</p>
-					</div>
-					<a href="#" title="">
-						<div class="card-footer text-center">
-							Saiba Mais
-						</div>
-					</a>
-				</div>
+				@endforeach
+
 			</div>
 
 		</div>

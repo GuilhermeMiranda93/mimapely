@@ -26,4 +26,4 @@
 
 <meta property="og:image" content="http://ecosoitic.com.br/img/intro-slide-bg-brand.jpg">
 
-<title>Hotel Belo Horizonte</title>
+<title>Mimapely - Construtora e Incorporadora</title>

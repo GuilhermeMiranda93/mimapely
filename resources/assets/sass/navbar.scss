@@ -4,4 +4,10 @@
 			border-bottom: 4px solid $cor_empresa;
 		}
 	}
+
+	.navbar-brand{
+		img{
+			max-height: 80px;
+		}
+	}
 }

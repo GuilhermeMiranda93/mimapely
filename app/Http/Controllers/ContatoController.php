@@ -39,46 +39,9 @@ class ContatoController extends Controller
 			]);
 	}
 
-	 public function localizacao(){
+	 public function faq(){
 
-		$telefone = Texto::where('localizacao',7)
-		->where('ativo',1)
-		->where('excluido',0)
-		->get();
-
-		$endereco = Texto::where('localizacao',11)
-		->where('ativo',1)
-		->where('excluido',0)
-		->get();
-
-		$email = Texto::where('localizacao',12)
-		->where('ativo',1)
-		->where('excluido',0)
-		->get();
-
-		$redessociais = Texto::where('localizacao',13)
-		->where('ativo',1)
-		->where('excluido',0)
-		->get();
-
-		return view('pages.localizacao',[
-
-			'telefone' => $telefone,
-			'endereco' => $endereco,
-			'email' => $email,
-			'redessociais' => $redessociais
-			]);
-	}
-
-	 public function cidade(){
-
-	 	$descricao = Texto::where('localizacao',17)
-		->where('ativo',1)
-		->where('excluido',0)
-		->limit(1)
-		->get();
-
-		$cidade = Texto::where('localizacao',16)
+	 	$perguntas = Texto::where('localizacao',6)
 		->where('ativo',1)
 		->where('excluido',0)
 		->get();
@@ -103,10 +66,9 @@ class ContatoController extends Controller
 		->where('excluido',0)
 		->get();
 
-		return view('pages.cidade',[
+		return view('pages.faq',[
 
-			'descricao' => $descricao,
-			'cidade' => $cidade,
+			'perguntas' => $perguntas,
 			'telefone' => $telefone,
 			'endereco' => $endereco,
 			'email' => $email,

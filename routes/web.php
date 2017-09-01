@@ -19,12 +19,22 @@ Route::get('/apartamento', 'SobreController@apartamento');
 
 Route::get('/cafe-da-manha', 'SobreController@cafedamanha');
 
-Route::get('/precos', 'OutrosController@preco');
+Route::get('/parceiros', 'OutrosController@parceiros');
 
-Route::get('/reservas', 'OutrosController@reserva');
+Route::get('/fotos', 'OutrosController@fotos');
+
+Route::get('/entregues', 'OutrosController@entregues');
+
+Route::get('/lancamentos', 'OutrosController@lancamentos');
+
+Route::get('/obras-em-andamento', 'OutrosController@obrasemandamento');
+
+Route::get('/pre-lancamento', 'OutrosController@prelancamento');
+
+Route::get('/servicos', 'OutrosController@servicos');
 
 Route::get('/contato', 'ContatoController@contato');
 
-Route::get('/localizacao', 'ContatoController@localizacao');
+Route::get('/faq', 'ContatoController@faq');
 
 Route::get('/nossa-cidade', 'ContatoController@cidade');

@@ -3,7 +3,7 @@
         <div class="row">
 
 
-            <div class="col-md-4 col-lg-4">
+            <div class="col-12 col-md-4 col-lg-4">
                 <ul class="text-left">
                     <h6>SAIBA MAIS</h6>
                     <li><a href="{{url('/')}}">Quem Somos</a></li>
@@ -15,11 +15,11 @@
                 </ul>
             </div>
 
-            <div class="col-md-4 col-lg-4">
-            <img src="{{URL::asset('img/logo_BH.png')}}" alt="">
+            <div class="col-12 col-md-4 col-lg-4">
+            <img class="img-fluid p-4" src="{{URL::asset('img/logo_branco.png')}}" alt="">
             </div>
             
-            <div class="col-md-4 col-lg-4">
+            <div class="col-12 col-md-4 col-lg-4">
 
                 <ul class="text-right">
                     <h6 class="">FALE CONOSCO</h6>
