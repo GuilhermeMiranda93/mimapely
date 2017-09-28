@@ -10,22 +10,34 @@ class ContatoController extends Controller
 {
      public function contato(){
 
-		$telefone = Texto::where('localizacao',7)
+     	$empreendimentos = Texto::where('localizacao',5)
+		->where('destaque',1)
 		->where('ativo',1)
 		->where('excluido',0)
 		->get();
 
-		$endereco = Texto::where('localizacao',11)
+		foreach($empreendimentos as $item){
+
+			$item->slug = str_slug($item->titulo,'_');
+
+		}
+
+		$telefone = Texto::where('localizacao',1)
 		->where('ativo',1)
 		->where('excluido',0)
 		->get();
 
-		$email = Texto::where('localizacao',12)
+		$endereco = Texto::where('localizacao',2)
 		->where('ativo',1)
 		->where('excluido',0)
 		->get();
 
-		$redessociais = Texto::where('localizacao',13)
+		$email = Texto::where('localizacao',3)
+		->where('ativo',1)
+		->where('excluido',0)
+		->get();
+
+		$redessociais = Texto::where('localizacao',4)
 		->where('ativo',1)
 		->where('excluido',0)
 		->get();
@@ -35,44 +47,8 @@ class ContatoController extends Controller
 			'telefone' => $telefone,
 			'endereco' => $endereco,
 			'email' => $email,
-			'redessociais' => $redessociais
-			]);
-	}
-
-	 public function faq(){
-
-	 	$perguntas = Texto::where('localizacao',6)
-		->where('ativo',1)
-		->where('excluido',0)
-		->get();
-
-		$telefone = Texto::where('localizacao',7)
-		->where('ativo',1)
-		->where('excluido',0)
-		->get();
-
-		$endereco = Texto::where('localizacao',11)
-		->where('ativo',1)
-		->where('excluido',0)
-		->get();
-
-		$email = Texto::where('localizacao',12)
-		->where('ativo',1)
-		->where('excluido',0)
-		->get();
-
-		$redessociais = Texto::where('localizacao',13)
-		->where('ativo',1)
-		->where('excluido',0)
-		->get();
-
-		return view('pages.faq',[
-
-			'perguntas' => $perguntas,
-			'telefone' => $telefone,
-			'endereco' => $endereco,
-			'email' => $email,
-			'redessociais' => $redessociais
+			'redessociais' => $redessociais,
+			'empreendimentos' => $empreendimentos
 			]);
 	}
 }

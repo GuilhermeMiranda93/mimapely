@@ -5,6 +5,9 @@
 @slot('activeHome')
 inactive
 @endslot
+@slot('activeSobre')
+inactive
+@endslot
 @slot('activePortfolio')
 inactive
 @endslot
@@ -20,8 +23,9 @@ inactive
 @endcomponent
 
 <div class="corpo-site">
-	
+
 	<div class="jumbotron jumbotron-fluid">
+		<div class="overlay-pattern"></div>
 		<div class="container">
 			<h2 class="display-3 text-center">Parceiros</h2>
 			<ol class="breadcrumb text-center mb-0">
@@ -31,56 +35,64 @@ inactive
 		</div>
 	</div>
 
-
-	<div class="container">
-
-		<div class="row my-5">
-			<div class="col-12">
-				<h2>Empresas Parceiras</h2>
-				<hr>
-
-				<div class="row">
-
-					@foreach($empresas as $item)
-
-					<div class="col-6 col-sm-3 col-md-3">
-						<img src="{{url::asset($item->imagem)}}" class="img-fluid" alt="{{$item->titulo}}">
+	<section id="patrocinadores">
+		<div class="container">
+			<div class="row">
+				@foreach($empresas as $item)
+				<div class="col-12 col-md-3 div-img mb-4">
+					<div>
+						<img src="{{$item->imagem}}" alt="{{$item->titulo}}">
 					</div>
-
-					@endforeach
-
-
 				</div>
+				@endforeach
 				
 			</div>
+			
+			
 		</div>
+		
+	</section>
 
-		<div class="row my-5">
-			<div class="col-12">
-				<h2>Imobiliárias Parceiras</h2>
-				<hr>
-
-				<div class="row">
-
-					@foreach($imobiliarias as $item)
-
-					<div class="col-6 col-sm-3 col-md-3">
-						<img src="{{url::asset($item->imagem)}}" class="img-fluid" alt="{{$item->titulo}}">
-					</div>
-
-					@endforeach
+	<section class="my-10 residenciais">
+		<div class="container">
+			<div class="owl-carousel owl-theme">
 
 
+
+				@foreach($empreendimentos as $item)
+				<div class="residencial mb-4">
+					<a href="{{url('projetos/'.$item->id_texto.'/'.$item->slug)}}">
+						<img src="{{URL::asset($item->imagem)}}" class="img-fluid" alt="{{$item->titulo}}">
+						<div class="overlay-div">
+							<div class="overlay"></div>
+						</div>
+						<div class="content">
+							<div class="border">
+								<div class="texto-residencial">
+									<h2 class="text-center">{{$item->titulo}}</h2>
+									<small>{{$item->descricao}}</small>
+								</div>
+							</div>
+						</div>
+					</a>
 				</div>
-				
+				@endforeach
+
+
+
 			</div>
 		</div>
+	</section>
 
-	</div>
+
+
 
 
 
 	
+
+
+
 
 
 	@component('footer',['telefone' => $telefone,'endereco' => $endereco,'email' => $email,'redessociais' => $redessociais])

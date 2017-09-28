@@ -1,2 +1,2 @@
-<script src="{{mix('js/lib.js')}}"></script>
-<script src="{{mix('js/custom.js')}}"></script>
+<script src="{{URL::asset('js/lib.js')}}"></script>
+<script src="{{URL::asset('js/custom.js')}}"></script>

@@ -6,17 +6,15 @@
             <div class="col-12 col-md-4 col-lg-4">
                 <ul class="text-left">
                     <h6>SAIBA MAIS</h6>
-                    <li><a href="{{url('/')}}">Quem Somos</a></li>
-                    <li><a href="{{url('/aecos')}}">O Hotel</a></li>
-                    <li><a href="{{url('/cases')}}">Apartamento</a></li>
-                    <li><a href="{{url('/servicos')}}">Café-da-manhã</a></li>
-                    <li><a href="{{url('/blog')}}">Preços</a></li>
-                    <li><a href="{{url('/contato')}}">Reservas</a></li>
+                    <li><a href="{{url('/sobre')}}">Sobre</a></li>
+                    <li><a href="{{url('/projetos')}}">Empreendimentos</a></li>
+                    <li><a href="{{url('/parceiros')}}">Parceiros</a></li>
+                    <li><a href="{{url('/contato')}}">Contato</a></li>
                 </ul>
             </div>
 
             <div class="col-12 col-md-4 col-lg-4">
-            <img class="img-fluid p-4" src="{{URL::asset('img/logo_branco.png')}}" alt="">
+                <img class="img-fluid p-4" src="{{URL::asset('img/logo_branco.png')}}" alt="">
             </div>
             
             <div class="col-12 col-md-4 col-lg-4">
@@ -24,6 +22,9 @@
                 <ul class="text-right">
                     <h6 class="">FALE CONOSCO</h6>
                     @foreach($telefone as $item)
+                    <li><p>{{$item->descricao}}</p></p></li>
+                    @endforeach
+                    @foreach($email as $item)
                     <li><p>{{$item->descricao}}</p></p></li>
                     @endforeach
                     @foreach($endereco as $item)

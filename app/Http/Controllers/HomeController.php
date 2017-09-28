@@ -14,38 +14,48 @@ class HomeController extends Controller
     	->where('excluido',0)
     	->get();
 
-        $sobre = Texto::where('localizacao',18)
+        $sobre = Texto::where('localizacao',6)
         ->where('ativo',1)
         ->where('excluido',0)
         ->limit(1)
         ->get();
 
-    	$telefone = Texto::where('localizacao',7)
+        $valores = Texto::where('localizacao',8)
+        ->where('ativo',1)
+        ->where('excluido',0)
+        ->get();
+
+    	$telefone = Texto::where('localizacao',1)
     	->where('ativo',1)
     	->where('excluido',0)
     	->get();
 
-    	$endereco = Texto::where('localizacao',11)
+    	$endereco = Texto::where('localizacao',2)
     	->where('ativo',1)
     	->where('excluido',0)
     	->get();
 
-    	$email = Texto::where('localizacao',12)
+    	$email = Texto::where('localizacao',3)
     	->where('ativo',1)
     	->where('excluido',0)
     	->get();
 
-    	$redessociais = Texto::where('localizacao',13)
+    	$redessociais = Texto::where('localizacao',4)
     	->where('ativo',1)
     	->where('excluido',0)
     	->get();
 
-        $empreendimentos = Texto::where('localizacao',3)
+        $empreendimentos = Texto::where('localizacao',5)
         ->where('ativo',1)
         ->where('excluido',0)
         ->where('destaque',1)
-        ->limit(3)
         ->get();
+
+        foreach($empreendimentos as $item){
+
+            $item->slug = str_slug($item->titulo,'_');
+
+        }
 
     	return view('pages.home',[
 
@@ -55,7 +65,8 @@ class HomeController extends Controller
     		'email' => $email,
     		'redessociais' => $redessociais,
             'empreendimentos' => $empreendimentos,
-            'sobre' => $sobre
+            'sobre' => $sobre,
+            'valores' => $valores,
 
     		]);
     }

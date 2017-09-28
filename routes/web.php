@@ -13,28 +13,14 @@
 
 Route::get('/', 'HomeController@home');
 
-Route::get('/o-hotel', 'SobreController@hotel');
+Route::get('/sobre', 'SobreController@sobre');
 
-Route::get('/apartamento', 'SobreController@apartamento');
+Route::get('/projetos', 'OutrosController@projetos');
 
-Route::get('/cafe-da-manha', 'SobreController@cafedamanha');
+Route::get('/projetos/{id}/{nome_projeto}', 'OutrosController@residencial');
 
 Route::get('/parceiros', 'OutrosController@parceiros');
 
-Route::get('/fotos', 'OutrosController@fotos');
-
-Route::get('/entregues', 'OutrosController@entregues');
-
-Route::get('/lancamentos', 'OutrosController@lancamentos');
-
-Route::get('/obras-em-andamento', 'OutrosController@obrasemandamento');
-
-Route::get('/pre-lancamento', 'OutrosController@prelancamento');
-
-Route::get('/servicos', 'OutrosController@servicos');
-
 Route::get('/contato', 'ContatoController@contato');
 
-Route::get('/faq', 'ContatoController@faq');
-
-Route::get('/nossa-cidade', 'ContatoController@cidade');
+Route::post('/sendmail', 'MailController@sendmail');

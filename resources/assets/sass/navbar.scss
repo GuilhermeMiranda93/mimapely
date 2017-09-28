@@ -1,8 +1,17 @@
 .navbar{
+	background-color: transparent !important;
+	transition: 1s ease;
+
+
 	.active{
 		.nav-link{
 			border-bottom: 4px solid $cor_empresa;
 		}
+	}
+
+	.nav-link{
+		font-weight: 400;
+		font-family: 'Oswald';
 	}
 
 	.navbar-brand{
@@ -10,4 +19,16 @@
 			max-height: 80px;
 		}
 	}
+}
+
+.divider{
+	background-color: white;
+	width: 4px;
+	height: 40px;
+}
+
+.active-nav{
+	background-color: white !important;
+	transition: 1s ease;
+	color: $cor_empresa !important;
 }

@@ -9,283 +9,167 @@ use App\Galeria;
 
 class OutrosController extends Controller
 {
-    public function parceiros(){
-		$empresas = Texto::where('localizacao',5)
+	public function parceiros(){
+		$empresas = Texto::where('localizacao',7)
 		->where('ativo',1)
 		->where('excluido',0)
 		->get();
 
-		$imobiliarias = Texto::where('localizacao',4)
+		$empreendimentos = Texto::where('localizacao',5)
+		->where('destaque',1)
 		->where('ativo',1)
 		->where('excluido',0)
 		->get();
 
-		$telefone = Texto::where('localizacao',7)
+		foreach($empreendimentos as $item){
+
+			$item->slug = str_slug($item->titulo,'_');
+
+		}
+
+		$telefone = Texto::where('localizacao',1)
 		->where('ativo',1)
 		->where('excluido',0)
 		->get();
 
-		$endereco = Texto::where('localizacao',11)
+		$endereco = Texto::where('localizacao',2)
 		->where('ativo',1)
 		->where('excluido',0)
 		->get();
 
-		$email = Texto::where('localizacao',12)
+		$email = Texto::where('localizacao',3)
 		->where('ativo',1)
 		->where('excluido',0)
 		->get();
 
-		$redessociais = Texto::where('localizacao',13)
+		$redessociais = Texto::where('localizacao',4)
 		->where('ativo',1)
 		->where('excluido',0)
 		->get();
 
 		return view('pages.parceiros',[
-			'imobiliarias' => $imobiliarias,
 			'empresas' => $empresas,
 			'telefone' => $telefone,
 			'endereco' => $endereco,
 			'email' => $email,
-			'redessociais' => $redessociais
-			]);
+			'redessociais' => $redessociais,
+			'empreendimentos' => $empreendimentos
+		]);
 	}
 
-	public function fotos(){
+	public function projetos(){
 
-		$titulo = 'Galeria de Fotos';
+		$titulo = 'Empreendimentos';
 
-		$fotos = Galeria::where('localizacao',1)
+		$empreendimentos = Texto::where('localizacao',5)
 		->where('ativo',1)
 		->where('excluido',0)
 		->get();
 
-		$telefone = Texto::where('localizacao',7)
+		foreach($empreendimentos as $item){
+
+			$item->slug = str_slug($item->titulo,'_');
+
+		}
+
+		$telefone = Texto::where('localizacao',1)
 		->where('ativo',1)
 		->where('excluido',0)
 		->get();
 
-		$endereco = Texto::where('localizacao',11)
+		$endereco = Texto::where('localizacao',2)
 		->where('ativo',1)
 		->where('excluido',0)
 		->get();
 
-		$email = Texto::where('localizacao',12)
+		$email = Texto::where('localizacao',3)
 		->where('ativo',1)
 		->where('excluido',0)
 		->get();
 
-		$redessociais = Texto::where('localizacao',13)
-		->where('ativo',1)
-		->where('excluido',0)
-		->get();
-
-		return view('pages.fotos',[
-			'titulo' => $titulo,
-			'fotos' => $fotos,
-			'telefone' => $telefone,
-			'endereco' => $endereco,
-			'email' => $email,
-			'redessociais' => $redessociais
-			]);
-	}
-
-	public function entregues(){
-
-		$titulo = 'Entregas';
-
-		$fotos = Galeria::where('localizacao',2)
-		->where('ativo',1)
-		->where('excluido',0)
-		->get();
-
-		$telefone = Texto::where('localizacao',7)
-		->where('ativo',1)
-		->where('excluido',0)
-		->get();
-
-		$endereco = Texto::where('localizacao',11)
-		->where('ativo',1)
-		->where('excluido',0)
-		->get();
-
-		$email = Texto::where('localizacao',12)
-		->where('ativo',1)
-		->where('excluido',0)
-		->get();
-
-		$redessociais = Texto::where('localizacao',13)
-		->where('ativo',1)
-		->where('excluido',0)
-		->get();
-
-		return view('pages.fotos',[
-			'titulo' => $titulo,
-			'fotos' => $fotos,
-			'telefone' => $telefone,
-			'endereco' => $endereco,
-			'email' => $email,
-			'redessociais' => $redessociais
-			]);
-	}
-
-
-	public function lancamentos(){
-
-		$titulo = 'Lançamentos';
-
-		$fotos = Galeria::where('localizacao',3)
-		->where('ativo',1)
-		->where('excluido',0)
-		->get();
-
-		$telefone = Texto::where('localizacao',7)
-		->where('ativo',1)
-		->where('excluido',0)
-		->get();
-
-		$endereco = Texto::where('localizacao',11)
-		->where('ativo',1)
-		->where('excluido',0)
-		->get();
-
-		$email = Texto::where('localizacao',12)
-		->where('ativo',1)
-		->where('excluido',0)
-		->get();
-
-		$redessociais = Texto::where('localizacao',13)
-		->where('ativo',1)
-		->where('excluido',0)
-		->get();
-
-		return view('pages.fotos',[
-			'titulo' => $titulo,
-			'fotos' => $fotos,
-			'telefone' => $telefone,
-			'endereco' => $endereco,
-			'email' => $email,
-			'redessociais' => $redessociais
-			]);
-	}
-
-	public function obrasemandamento(){
-
-		$titulo = 'Obras em Andamento';
-
-		$fotos = Galeria::where('localizacao',4)
-		->where('ativo',1)
-		->where('excluido',0)
-		->get();
-
-		$telefone = Texto::where('localizacao',7)
-		->where('ativo',1)
-		->where('excluido',0)
-		->get();
-
-		$endereco = Texto::where('localizacao',11)
-		->where('ativo',1)
-		->where('excluido',0)
-		->get();
-
-		$email = Texto::where('localizacao',12)
-		->where('ativo',1)
-		->where('excluido',0)
-		->get();
-
-		$redessociais = Texto::where('localizacao',13)
-		->where('ativo',1)
-		->where('excluido',0)
-		->get();
-
-		return view('pages.fotos',[
-			'titulo' => $titulo,
-			'fotos' => $fotos,
-			'telefone' => $telefone,
-			'endereco' => $endereco,
-			'email' => $email,
-			'redessociais' => $redessociais
-			]);
-	}
-
-	public function prelancamento(){
-
-		$titulo = 'Pré-Lançamento';
-
-		$fotos = Galeria::where('localizacao',5)
-		->where('ativo',1)
-		->where('excluido',0)
-		->get();
-
-		$telefone = Texto::where('localizacao',7)
-		->where('ativo',1)
-		->where('excluido',0)
-		->get();
-
-		$endereco = Texto::where('localizacao',11)
-		->where('ativo',1)
-		->where('excluido',0)
-		->get();
-
-		$email = Texto::where('localizacao',12)
-		->where('ativo',1)
-		->where('excluido',0)
-		->get();
-
-		$redessociais = Texto::where('localizacao',13)
-		->where('ativo',1)
-		->where('excluido',0)
-		->get();
-
-		return view('pages.fotos',[
-			'titulo' => $titulo,
-			'fotos' => $fotos,
-			'telefone' => $telefone,
-			'endereco' => $endereco,
-			'email' => $email,
-			'redessociais' => $redessociais
-			]);
-	}
-
-	public function servicos(){
-
-		$projetos = Texto::where('localizacao',15)
-		->where('ativo',1)
-		->where('excluido',0)
-		->get();
-
-		$construcoes = Texto::where('localizacao',17)
-		->where('ativo',1)
-		->where('excluido',0)
-		->get();
-
-		$telefone = Texto::where('localizacao',7)
-		->where('ativo',1)
-		->where('excluido',0)
-		->get();
-
-		$endereco = Texto::where('localizacao',11)
-		->where('ativo',1)
-		->where('excluido',0)
-		->get();
-
-		$email = Texto::where('localizacao',12)
-		->where('ativo',1)
-		->where('excluido',0)
-		->get();
-
-		$redessociais = Texto::where('localizacao',13)
+		$redessociais = Texto::where('localizacao',4)
 		->where('ativo',1)
 		->where('excluido',0)
 		->get();
 
 		return view('pages.projetos',[
-			'projetos' => $projetos,
-			'construcoes' => $construcoes,
+			'titulo' => $titulo,
+			'empreendimentos' => $empreendimentos,
 			'telefone' => $telefone,
 			'endereco' => $endereco,
 			'email' => $email,
 			'redessociais' => $redessociais
-			]);
+		]);
+	}
+
+	public function residencial($id,$nome_projeto){
+
+		$titulo = 'Empreendimentos';
+
+		$nome_residencial = '';
+		$imagem_residencial = '';
+		$id_galeria = '';
+
+		$residencial = Texto::where('id_texto',$id)
+		->where('ativo',1)
+		->where('excluido',0)
+		->get();
+
+		foreach($residencial as $item){
+			$nome_residencial = $item->titulo;
+			$imagem_residencial = $item->imagem;
+			$id_galeria = $item->galeria;
+		}
+
+		$galeria = Galeria::where('localizacao',$id_galeria)
+		->where('ativo',1)
+		->where('excluido',0)
+		->get();
+
+		$empreendimentos = Texto::where('localizacao',5)
+		->where('destaque',1)
+		->where('ativo',1)
+		->where('excluido',0)
+		->get();
+
+		foreach($empreendimentos as $item){
+
+			$item->slug = str_slug($item->titulo,'_');
+
+		}
+
+		$telefone = Texto::where('localizacao',1)
+		->where('ativo',1)
+		->where('excluido',0)
+		->get();
+
+		$endereco = Texto::where('localizacao',2)
+		->where('ativo',1)
+		->where('excluido',0)
+		->get();
+
+		$email = Texto::where('localizacao',3)
+		->where('ativo',1)
+		->where('excluido',0)
+		->get();
+
+		$redessociais = Texto::where('localizacao',4)
+		->where('ativo',1)
+		->where('excluido',0)
+		->get();
+
+		return view('pages.projetodetalhe',[
+			'empreendimentos' => $empreendimentos,
+			'residencial' => $residencial,
+			'titulo' => $titulo,
+			'telefone' => $telefone,
+			'endereco' => $endereco,
+			'email' => $email,
+			'redessociais' => $redessociais,
+			'nome_residencial' => $nome_residencial,
+			'imagem_residencial' => $imagem_residencial,
+			'galeria' => $galeria
+		]);
 	}
 }
 

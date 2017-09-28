@@ -16,7 +16,7 @@ footer{
 		list-style-type: none;
 	}
 
-	background-color: $cor_empresa;
+	background-color: $bg_dark;
 	
 	h6{
 		font-weight: 700;
@@ -24,14 +24,14 @@ footer{
 	}
 
 	.footer-info{
-		background-color: white;
+		background-color: rgb(40,40,40);
 
 		p{
-			color: $cor_empresa;
+			color: white;
 		}
 
 		a{
-			color: $cor_empresa;
+			color: white;
 		}
 		
 	}

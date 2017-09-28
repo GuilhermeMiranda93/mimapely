@@ -1,0 +1,95 @@
+	/*
+  	Flaticon icon font: Flaticon
+  	Creation date: 26/09/2017 22:14
+  	*/
+
+@font-face {
+  font-family: "Flaticon";
+  src: url("./Flaticon.eot");
+  src: url("./Flaticon.eot?#iefix") format("embedded-opentype"),
+       url("./Flaticon.woff") format("woff"),
+       url("./Flaticon.ttf") format("truetype"),
+       url("./Flaticon.svg#Flaticon") format("svg");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@media screen and (-webkit-min-device-pixel-ratio:0) {
+  @font-face {
+    font-family: "Flaticon";
+    src: url("./Flaticon.svg#Flaticon") format("svg");
+  }
+}
+
+[class^="flaticon-"]:before, [class*=" flaticon-"]:before,
+[class^="flaticon-"]:after, [class*=" flaticon-"]:after {   
+  font-family: Flaticon;
+        font-size: 20px;
+font-style: normal;
+margin-left: 20px;
+}
+
+.flaticon-elevator:before { content: "\f100"; }
+.flaticon-football:before { content: "\f101"; }
+.flaticon-cubes:before { content: "\f102"; }
+.flaticon-time:before { content: "\f103"; }
+.flaticon-studying-1:before { content: "\f104"; }
+.flaticon-showers:before { content: "\f105"; }
+.flaticon-japanese-food:before { content: "\f106"; }
+.flaticon-chairs-1:before { content: "\f107"; }
+.flaticon-plugging-1:before { content: "\f108"; }
+.flaticon-restauran:before { content: "\f109"; }
+.flaticon-kitchen-pack-3:before { content: "\f10a"; }
+.flaticon-kitchen-pack-2:before { content: "\f10b"; }
+.flaticon-home-repair:before { content: "\f10c"; }
+.flaticon-carpet:before { content: "\f10d"; }
+.flaticon-groceries:before { content: "\f10e"; }
+.flaticon-televisions-1:before { content: "\f10f"; }
+.flaticon-painter:before { content: "\f110"; }
+.flaticon-comfortable-1:before { content: "\f111"; }
+.flaticon-seat:before { content: "\f112"; }
+.flaticon-house:before { content: "\f113"; }
+.flaticon-tap:before { content: "\f114"; }
+.flaticon-gold-medal:before { content: "\f115"; }
+.flaticon-light-bulb:before { content: "\f116"; }
+.flaticon-reflecting:before { content: "\f117"; }
+.flaticon-bedroom-2:before { content: "\f118"; }
+.flaticon-studying:before { content: "\f119"; }
+.flaticon-door-key:before { content: "\f11a"; }
+.flaticon-coffee-cup-1:before { content: "\f11b"; }
+.flaticon-ventilator:before { content: "\f11c"; }
+.flaticon-real-estate-3:before { content: "\f11d"; }
+.flaticon-kitchen-tools:before { content: "\f11e"; }
+.flaticon-carpenter:before { content: "\f11f"; }
+.flaticon-alcoholic:before { content: "\f120"; }
+.flaticon-sleepy:before { content: "\f121"; }
+.flaticon-yard:before { content: "\f122"; }
+.flaticon-real-estate-2:before { content: "\f123"; }
+.flaticon-kitchen-pack-1:before { content: "\f124"; }
+.flaticon-chairs:before { content: "\f125"; }
+.flaticon-televisions:before { content: "\f126"; }
+.flaticon-gardening:before { content: "\f127"; }
+.flaticon-coolnes:before { content: "\f128"; }
+.flaticon-game-console:before { content: "\f129"; }
+.flaticon-real-estate-1:before { content: "\f12a"; }
+.flaticon-digital:before { content: "\f12b"; }
+.flaticon-thermometer-1:before { content: "\f12c"; }
+.flaticon-thermometer:before { content: "\f12d"; }
+.flaticon-bike:before { content: "\f12e"; }
+.flaticon-swimming-pool:before { content: "\f12f"; }
+.flaticon-elegant:before { content: "\f130"; }
+.flaticon-phone-receiver:before { content: "\f131"; }
+.flaticon-bedroom-1:before { content: "\f132"; }
+.flaticon-kitchen-pack:before { content: "\f133"; }
+.flaticon-hair-salon:before { content: "\f134"; }
+.flaticon-bake:before { content: "\f135"; }
+.flaticon-plugging:before { content: "\f136"; }
+.flaticon-laptop-computer:before { content: "\f137"; }
+.flaticon-alarm-clock:before { content: "\f138"; }
+.flaticon-phone-call:before { content: "\f139"; }
+.flaticon-restroom:before { content: "\f13a"; }
+.flaticon-comfortable:before { content: "\f13b"; }
+.flaticon-real-estate:before { content: "\f13c"; }
+.flaticon-bedroom:before { content: "\f13d"; }
+.flaticon-dumbbell:before { content: "\f13e"; }
+.flaticon-coffee-cup:before { content: "\f13f"; }

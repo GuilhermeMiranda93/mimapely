@@ -1,1 +1,2 @@
+<script type='text/javascript' src='//platform-api.sharethis.com/js/sharethis.js#property=59c1205a2b68e2001125ad5f&product=inline-share-buttons' async='async'></script>
 <script src="https://use.fontawesome.com/2502a465f6.js"></script>

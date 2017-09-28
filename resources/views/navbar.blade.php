@@ -1,4 +1,4 @@
-<nav class="navbar navbar-toggleable-md navbar-light bg-faded fixed-top">
+<nav class="navbar navbar-toggleable-md navbar-light fixed-top">
   <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
     <span class="navbar-toggler-icon"></span>
   </button>
@@ -6,41 +6,40 @@
   <div class="collapse navbar-collapse justify-content-center" id="navbarNavDropdown">
     <ul class="navbar-nav">
 
-      <li class="nav-item {{$activeHome}}">
-        <a class="nav-link" href="{{url('/')}}">Home <span class="sr-only">(current)</span></a>
+      <li class="nav-item {{$activeHome}} mx-3">
+        <a class="nav-link" href="{{url('/')}}">HOME <span class="sr-only">(current)</span></a>
       </li>
 
-      <li class="nav-item dropdown {{$activePortfolio}}">
-        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-          Portfólio
-        </a>
-        <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-          <a class="dropdown-item" href="{{url('/fotos')}}">Fotos</a>
-          <a class="dropdown-item" href="{{url('/entregues')}}">Entregues</a>
-          <a class="dropdown-item" href="{{url('/lancamentos')}}">Lançamentos</a>
-          <a class="dropdown-item" href="{{url('/obras-em-andamento')}}">Obras em Andamento</a>
-          <a class="dropdown-item" href="{{url('/pre-lancamento')}}">Pré-lançamento</a>
-        </div>
+      <li class="nav-item divider mx-3 hidden-md-down"></li>
+
+      <li class="nav-item {{$activeSobre}} mx-3">
+        <a class="nav-link" href="{{url('/sobre')}}">SOBRE</a>
       </li>
 
-      <li class="nav-item {{$activeServicos}}">
-        <a class="nav-link" href="{{url('/servicos')}}">Serviços</a>
+      <li class="nav-item divider mx-3 hidden-md-down"></li>
+
+      <li class="nav-item {{$activePortfolio}} mx-3">
+        <a class="nav-link" href="{{url('/projetos')}}">EMPREENDIMENTOS</a>
       </li>
 
-      <li class="nav-item {{$activeParceiros}}">
-        <a class="nav-link" href="{{url('/parceiros')}}">Parceiros</a>
+      <li class="nav-item divider mx-3 hidden-md-down"></li>
+
+      <li class="nav-item {{$activeParceiros}} mx-3">
+        <a class="nav-link" href="{{url('/parceiros')}}">PARCEIROS</a>
       </li>
 
-      <li class="nav-item dropdown {{$activeContato}}">
-        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-          Ajuda
-        </a>
-        <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-          <a class="dropdown-item" href="{{url('/contato')}}">Fale conosco</a>
-          <a class="dropdown-item" href="{{url('/faq')}}">Perguntas Frequentes</a>
-          <a class="dropdown-item" href="{{url('/nossa-cidade')}}">Newsletter</a>
-        </div>
+      <li class="nav-item divider mx-3 hidden-md-down"></li>
+
+      <li class="nav-item {{$activeContato}} mx-3">
+        <a class="nav-link" href="{{url('/contato')}}">CONTATO</a>
       </li>
+
+      <li class="nav-item divider mx-3 hidden-md-down"></li>
+
+      <li class="nav-item mx-3">
+        <a class="nav-link" href="https://www.facebook.com/Mimapely/" target="_blank"><i class="fa fa-facebook"></i></a>
+      </li>
+
 
       
 

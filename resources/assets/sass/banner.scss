@@ -1,0 +1,69 @@
+.carousel-inner{
+	.carousel-item{
+		height: 100vh !important;
+		overflow-y: hidden;
+		img{
+			width: 100%;
+		}
+		.overlay-pattern{
+			width: 100%;
+			height: 100%;
+			position: absolute;
+			top: 0;
+			left: 0;
+			background-image: url('../img/trace2.png');
+			background-repeat: repeat;
+			opacity: .2;
+		}
+	}
+
+}
+
+.carousel-caption{
+	width: 100%;
+	height: 100%;
+	left: 0 !important;
+	top: 0 !important;
+	display: flex;
+	justify-content: center;
+	align-items: flex-start;
+	flex-direction: column;
+	padding: 15%;
+	h2{
+		text-align: left;
+		color: white !important;
+		font-size: 4rem !important;
+		font-weight: 900; 
+	}
+	span{
+		color: $cor_empresa;
+		font-weight: 300; 
+		font-size: 6rem !important;
+	}
+	p{
+		line-height: 20px;
+		font-weight: 300;
+		text-align: left;
+		max-width: 500px;
+	}
+}
+
+.filter {
+	position: relative;
+	-webkit-filter: contrast(85%) brightness(110%) saturate(75%) sepia(22%);
+	filter: contrast(85%) brightness(110%) saturate(75%) sepia(22%);
+	&::before {
+		content: "";
+		display: block;
+		height: 100%;
+		width: 100%;
+		top: 0;
+		left: 0;
+		position: absolute;
+		pointer-events: none;
+		mix-blend-mode: soft-light;
+		opacity: 0.5;
+		background: rgba(173, 205, 239, 1);
+	}
+
+}

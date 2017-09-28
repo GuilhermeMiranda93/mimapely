@@ -63,37 +63,91 @@
 /******/ 	return __webpack_require__(__webpack_require__.s = 0);
 /******/ })
 /************************************************************************/
-/******/ ({
-
-/***/ "./resources/assets/js/custom.js":
-/***/ (function(module, exports) {
-
-$(document).ready(function () {});
-
-/***/ }),
-
-/***/ "./resources/assets/sass/app.scss":
-/***/ (function(module, exports) {
-
-// removed by extract-text-webpack-plugin
-
-/***/ }),
-
-/***/ "./resources/assets/sass/bootstrap/bootstrap.scss":
-/***/ (function(module, exports) {
-
-// removed by extract-text-webpack-plugin
-
-/***/ }),
-
-/***/ 0:
+/******/ ([
+/* 0 */
 /***/ (function(module, exports, __webpack_require__) {
 
-__webpack_require__("./resources/assets/js/custom.js");
-__webpack_require__("./resources/assets/sass/app.scss");
-module.exports = __webpack_require__("./resources/assets/sass/bootstrap/bootstrap.scss");
+__webpack_require__(1);
+__webpack_require__(2);
+module.exports = __webpack_require__(3);
 
+
+/***/ }),
+/* 1 */
+/***/ (function(module, exports) {
+
+$(document).ready(function () {
+
+	$('.owl-carousel').owlCarousel({
+		loop: true,
+		margin: 10,
+		responsiveClass: true,
+		navText: '<>',
+		responsive: {
+			0: {
+				items: 1,
+				nav: true
+			},
+			600: {
+				items: 3,
+				nav: false
+			},
+			1000: {
+				items: 3,
+				nav: true,
+				loop: false
+			}
+		}
+	});
+
+	$('#form-contato .form-control').focus(function (e) {
+		var idElement = e.target['name'];
+
+		$('#' + idElement).css('font-size', '14px');
+		$('#' + idElement).css('top', '-15px');
+		$('#' + idElement).css('color', '#d11518');
+	});
+
+	$('#form-contato .form-control').focusout(function (e) {
+
+		var idElement = e.target['name'];
+
+		var inputValue = e.target['value'];
+
+		if (inputValue == "") {
+			$('#' + idElement).css('font-size', '16px');
+			$('#' + idElement).css('top', '8px');
+			$('#' + idElement).css('color', 'white');
+		}
+	});
+
+	$(window).scroll(function () {
+
+		if ($(window).scrollTop() > 15) {
+			console.log('maior');
+			$('.navbar').addClass('active-nav');
+			$('.navbar a').addClass('active-nav');
+			$('.divider').css('background-color', 'black');
+		} else {
+			console.log('menor');
+			$('.navbar').removeClass('active-nav');
+			$('.navbar a').removeClass('active-nav');
+			$('.divider').css('background-color', '#d11518');
+		}
+	});
+});
+
+/***/ }),
+/* 2 */
+/***/ (function(module, exports) {
+
+// removed by extract-text-webpack-plugin
+
+/***/ }),
+/* 3 */
+/***/ (function(module, exports) {
+
+// removed by extract-text-webpack-plugin
 
 /***/ })
-
-/******/ });
+/******/ ]);

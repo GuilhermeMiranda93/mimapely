@@ -21,6 +21,7 @@ mix.sass('resources/assets/sass/app.scss', 'public/css')
  	'resources/assets/js/jquery-3.2.1.js',
  	'resources/assets/js/tether.js',
  	'resources/assets/js/bootstrap.js',
- 	'resources/assets/js/lightbox.js'
- 	],'public/js/lib.js')
- .version();
+ 	'resources/assets/js/lightbox.js',
+ 	'resources/assets/js/owl.carousel.js',
+ 	'resources/assets/js/fotorama.js'
+ 	],'public/js/lib.js');
